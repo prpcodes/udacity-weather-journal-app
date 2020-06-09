@@ -2,13 +2,13 @@
 projectData = {};
 const port = 3000;
 // Require Express to run server and routes
-var express = require('express')
+var express = require('express');
 // Start up an instance of app
-var app = express()
+var app = express();
 
 /* Middleware*/
 //Here we are configuring express to use body-parser as middle-ware.
-const bodyParser = require('body-parser')
+const bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
