@@ -14,13 +14,18 @@ console.log(newDate);
 
 
 
-document.getElementById('generate').addEventListener('click', performAction);
+document.getElementById('generate').addEventListener('click', getEntrys);
 
-function performAction(e){
-const newAnimal =  document.getElementById('animal').value;
-getAnimal(baseURL,newAnimal, apiKey)
+function getEntrys(){
+    const text =  document.getElementById('feelings').value;
+    console.log(text)
+    const zip =  document.getElementById('zip').value;
+    console.log(zip)
+    //add response
+};
 
-}
+
+/*
 const getProjectData = async (baseURL, animal, key)=>{
 
   const res = await fetch(baseURL+animal+key)
@@ -34,3 +39,4 @@ const getProjectData = async (baseURL, animal, key)=>{
     // appropriately handle the error
   }
 }
+*/
