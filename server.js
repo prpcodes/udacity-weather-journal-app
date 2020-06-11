@@ -19,6 +19,12 @@ app.use(cors());
 // Initialize the main project folder
 app.use(express.static('website'));
 
+// Rout Main
+app.get('/projectData', function (req, res) {
+    res.send(projectData);
+  })
 
 // Setup Server
-const server = app.listen(port, ()=>{console.log(`running on localhost: ${port}`)})
+const server = app.listen(port, ()=> {
+  console.log(`running on localhost: ${port}`)
+});
