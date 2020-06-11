@@ -1,9 +1,9 @@
-// Setup empty JS object to act as endpoint for all routes
+// Declare Variables
 projectData = {};
-const port = 3000;
+const PORT = process.env.PORT || 3000;
+
 // Require Express to run server and routes
 var express = require('express');
-// Start up an instance of app
 var app = express();
 
 /* Middleware*/
@@ -19,12 +19,24 @@ app.use(cors());
 // Initialize the main project folder
 app.use(express.static('website'));
 
-// Rout Main
-app.get('/projectData', function (req, res) {
-    res.send(projectData);
-  })
+// GET Request - return data stored in projectData
+app.get('/all', getData);
+
+function getData (req, res) {
+  res.send(projectData);
+};
+
+// POST Request - add incoming data to projectData
+app.post('/add', callBack);
+
+function callBack(req, res) {
+  projectData['temp'] = req.body.temp;
+  projectData['date'] = req.body.date;
+  projectData['content'] = req.body.content;
+  res.send(projectData);
+}
 
 // Setup Server
-const server = app.listen(port, ()=> {
-  console.log(`running on localhost: ${port}`)
+const server = app.listen(PORT, ()=> {
+  console.log(`Server started on port: ${PORT}`)
 });
