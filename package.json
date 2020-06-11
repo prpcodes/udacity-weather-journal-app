@@ -1,18 +1,29 @@
 {
-    "name": "weather_journal",
-    "description": "description",
-    "authors": "author",
-    "version": "1.0.0",
-    "main": "app.js",
-    "dependencies": {
-        "express": "^4.17.1"
-    },
-    "scripts": {
-        "start": "node server",
-        "dev": "nodemon server"
-    },
-    "devDependencies": {
-        "nodemon": "^2.0.4",
-        "prettier": "^2.0.5"
-    }
+  "name": "weather_journal",
+  "description": "description",
+  "authors": "author",
+  "version": "1.0.0",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "scripts": {
+    "start": "node server",
+    "dev": "nodemon server"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4",
+    "prettier": "^2.0.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/prpwien/weather-journal-app-udacity.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/prpwien/weather-journal-app-udacity/issues"
+  },
+  "homepage": "https://github.com/prpwien/weather-journal-app-udacity#readme"
 }
