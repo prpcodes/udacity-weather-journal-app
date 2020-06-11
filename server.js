@@ -1,10 +1,10 @@
 // Declare Variables
-projectData = {};
-const PORT = process.env.PORT || 3000;
+const projectData = {};
+const PORT = 3000;
 
 // Require Express to run server and routes
-var express = require('express');
-var app = express();
+const express = require('express');
+const app = express();
 
 /* Middleware*/
 //Here we are configuring express to use body-parser as middle-ware.
